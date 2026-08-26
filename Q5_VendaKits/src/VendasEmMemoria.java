@@ -8,9 +8,11 @@ public class VendasEmMemoria implements VendasFachada{
 	
 	public VendasEmMemoria() {
 		produtos = new ArrayList<>();
-		produtos.add(new Produto(1, "Caneta", 1.55));
-		produtos.add(new Produto(2, "Borracha", 1.15));
-		produtos.add(new Produto(3, "Caderno", 32.99));
+		produtos.add(new UnitarioProd(1, "Caneta", 1.55));
+		produtos.add(new UnitarioProd(2, "Borracha", 1.15));
+		produtos.add(new UnitarioProd(3, "Caderno", 32.99));
+		produtos.add(new ConjuntoProd(4, "Kit Escolar", 0.10,
+				List.of(produtos.get(0), produtos.get(1), produtos.get(2))));
 	}
 	
 	@Override
